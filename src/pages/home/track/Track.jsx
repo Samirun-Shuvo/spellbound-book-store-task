@@ -8,6 +8,9 @@ import { FaRegClock } from "react-icons/fa";
 import { IoVideocamOutline } from "react-icons/io5";
 import { FiDownload } from "react-icons/fi";
 import Banner from "../banner/Banner";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
 
 const tracks = [
   {
@@ -25,7 +28,7 @@ const tracks = [
     id: 2,
     title: "Web Design",
     courseName: "Web Design for Beginners",
-    rating: 4,
+    rating: 3.5,
     price: 100.0,
     time: "22hr 30min",
     totalVideo: 34,
@@ -47,7 +50,7 @@ const tracks = [
 
 const Track = () => {
   return (
-    <div className="bg-[white] py-4">
+    <div className="bg-[white] py-6">
       <Banner></Banner>
       <SectionTitle
         heading={"Our Tracks"}
@@ -58,7 +61,7 @@ const Track = () => {
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {tracks.map((track) => (
           <div key={track.id}>
-            <div className="card card-compact bg-base-100 shadow-xs p-4">
+            <div className="card card-compact bg-base-100 shadow-md p-4">
               <figure>
                 <img src={track.img} alt={track.title} className="w-full" />
               </figure>
@@ -67,7 +70,11 @@ const Track = () => {
                   <small className="text-[#c0bbbb]">{track.title}</small>
                 </p>
                 <p>
-                  <small>{track.rating}</small>
+                  <Rating
+                    style={{ maxWidth: 80 }}
+                    value={track.rating}
+                    readOnly
+                  />
                 </p>
               </div>
               <div>
