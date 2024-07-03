@@ -93,9 +93,12 @@ const Review = () => {
           }}
           pagination={{
             clickable: true,
-            el: '.swiper-pagination',
+            dynamicBullets: true, // Added dynamic bullets
             bulletClass: 'swiper-pagination-bullet',
             bulletActiveClass: 'swiper-pagination-bullet-active',
+            renderBullet: (index, className) => {
+              return '<span class="' + className + '"></span>';
+            }
           }}
           breakpoints={{
             640: {
@@ -112,7 +115,7 @@ const Review = () => {
           className="mySwiper"
         >
           {reviews.map((review) => (
-            <SwiperSlide key={review.id}>
+            <SwiperSlide key={review.id} className="pb-12">
               <div className="flex flex-col items-center bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <div className="mb-4">
                   <p className="text-sm text-gray-700 text-start italic">
@@ -135,6 +138,7 @@ const Review = () => {
               </div>
             </SwiperSlide>
           ))}
+          <div className="swiper-pagination"></div>
         </Swiper>
       </div>
     </div>
