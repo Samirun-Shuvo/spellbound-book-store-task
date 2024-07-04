@@ -8,12 +8,11 @@ const Experience = () => {
     <div>
       <div className="hero opacity-70 w-full">
         <div className="hero-content flex-col lg:flex-row-reverse w-full">
-          <div className="text-center lg:text-left lg:mr-20 lg:max-w-lg w-full">
+          <div className="text-center lg:text-left lg:mr-20 lg:max-w-lg w-full py-8">
             <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6">
               Premium <span className="text-orange-500">Learning</span>{" "}
               Experience
             </h1>
-
             <div className="flex justify-center lg:justify-start items-center mb-4">
               <div
                 className="relative bg-cover bg-center p-2"
@@ -46,10 +45,8 @@ const Experience = () => {
                 </p>
               </div>
             </div>
-
-            
           </div>
-          <div className="card bg-base-100 w-full mt-8 lg:mt-0">
+          <div className="card w-full mt-8 lg:mt-0">
             <img
               src={expImg}
               alt="Experience Header"
