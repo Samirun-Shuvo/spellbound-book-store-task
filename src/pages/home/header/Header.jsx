@@ -21,10 +21,10 @@ const Header = () => {
         </div>
 
         <div className="text-center lg:text-left p-4 lg:p-0">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">
             The <span className="text-[orange]">Smart</span>
           </h1>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">
             Choice For <span className="text-[orange]">Future</span>
           </h1>
           <p className="py-4 md:py-6 text-sm md:text-base lg:text-lg">

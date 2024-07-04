@@ -7,10 +7,13 @@ const Subscribe = () => {
       style={{ backgroundImage: `url(${subscribe})` }}
     >
       <div className="  text-white text-center p-8 rounded-lg">
-        <h1 className="text-3xl font-bold mb-2">Subscribe to our newsletter</h1>
-        <p className="text-md mb-6">
-          Lorem Ipsum is simply dummy text of the printing.
-        </p>
+      <h1 className="text-md sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2">
+      Subscribe to our newsletter
+    </h1>
+    <p className="text-xs sm:text-base md:text-md lg:text-lg xl:text-xl mb-4 md:mb-6 lg:mb-8">
+      Lorem Ipsum is simply dummy text of the printing.
+    </p>
+    
         <div className="flex justify-center">
           <div className="flex items-center bg-white rounded-full overflow-hidden shadow-lg">
             <input
