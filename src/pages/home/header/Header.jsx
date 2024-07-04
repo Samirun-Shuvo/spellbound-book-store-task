@@ -1,7 +1,14 @@
 import header_bg from "../../../assets/home/header/header-bg.png";
 import header_img from "../../../assets/home/header/header-img.png";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [animation, setAnimation] = useState(false);
+
+  useEffect(() => {
+    setAnimation(true);
+  }, []);
+
   return (
     <div
       className="hero bg-base-200 mb-32 overflow-hidden"
@@ -12,7 +19,7 @@ const Header = () => {
       }}
     >
       <div className="hero-content flex-col lg:flex-row-reverse w-full">
-        <div className="w-full max-w-2xl shrink-0">
+        <div className={`w-full max-w-2xl shrink-0 transition-transform duration-1000 ${animation ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
           <img
             src={header_img}
             alt="Header"
@@ -20,7 +27,7 @@ const Header = () => {
           />
         </div>
 
-        <div className="text-center lg:text-left p-4 lg:p-0">
+        <div className={`text-center lg:text-left p-4 lg:p-0 transition-opacity duration-1000 delay-300 ${animation ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">
             The <span className="text-[orange]">Smart</span>
           </h1>

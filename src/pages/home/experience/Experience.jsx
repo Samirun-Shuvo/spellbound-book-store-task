@@ -15,38 +15,46 @@ const Experience = () => {
             </h1>
             <div className="flex justify-center lg:justify-start items-center mb-4">
               <div
-                className="relative bg-cover bg-center p-2"
+                className="relative bg-cover bg-center p-2 transition duration-300 ease-in-out transform hover:scale-105"
                 style={{ backgroundImage: `url(${rectangle})` }}
               >
-                <img className="w-16 sm:w-20" src={heart} alt="heart" />
+                <img
+                  className="w-16 sm:w-20 animate-fade-slide-up"
+                  src={heart}
+                  alt="heart"
+                />
               </div>
               <div className="px-2 text-left">
                 <h2 className="text-md font-semibold py-1">
                   Easily Accessible
                 </h2>
                 <p className="text-xs text-gray-600">
-                  Learning Will feel Very Comfortable With Courslab.
+                  Learning will feel very comfortable with Courslab.
                 </p>
               </div>
             </div>
             <div className="flex justify-center lg:justify-start items-center">
               <div
-                className="relative bg-cover bg-center p-2"
+                className="relative bg-cover bg-center p-2 transition duration-300 ease-in-out transform hover:scale-105"
                 style={{ backgroundImage: `url(${rectangle})` }}
               >
-                <img className="w-16 sm:w-20" src={jigsaw} alt="jigsaw" />
+                <img
+                  className="w-16 sm:w-20 animate-fade-slide-up"
+                  src={jigsaw}
+                  alt="jigsaw"
+                />
               </div>
               <div className="px-2 text-left">
                 <h2 className="text-md font-semibold py-1">
                   Fun Learning Experience
                 </h2>
                 <p className="text-xs text-gray-600">
-                  Learning Will feel Very Comfortable With Courslab.
+                  Learning will feel very comfortable with Courslab.
                 </p>
               </div>
             </div>
           </div>
-          <div className="card w-full mt-8 lg:mt-0">
+          <div className="card w-full mt-8 lg:mt-0 animate-fade-slide-up">
             <img
               src={expImg}
               alt="Experience Header"
